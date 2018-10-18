@@ -43,3 +43,4 @@ model.compile(optimizer=SGD(lr=0.01), loss='categorical_crossentropy', metrics=[
 model.fit(x=x_train, y=y_train, epochs=30, batch_size=32)
 
 model.save(filepath="Image_Classifier.h5")
+
