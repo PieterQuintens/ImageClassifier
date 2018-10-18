@@ -2,6 +2,7 @@ from keras.datasets import cifar10
 import matplotlib.pyplot as plt
 import keras.utils as utils
 import numpy as np
+import cv2
 
 
 # To flatten matrices to straight arrays (easier to use in java apps)
@@ -33,8 +34,4 @@ train_images = train_images.astype('float32')
 train_images = train_images / 255
 test_images = test_images.astype('float32')
 test_images = test_images / 255
-
-
-
-
 
