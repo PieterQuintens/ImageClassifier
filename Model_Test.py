@@ -39,7 +39,5 @@ print(prediction)
 # print(np.argmax(prediction))
 print("Prediction: ", labels[max_index])
 
-
-
 # plt.imshow(x_test[0])
 # plt.show()
