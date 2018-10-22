@@ -51,8 +51,12 @@ model.add(Dense(units=10, activation='softmax'))
 # to get a decent result
 model.compile(optimizer=SGD(lr=0.01), loss='categorical_crossentropy', metrics=['accuracy'])
 
+<<<<<<< HEAD
 # Train step
 model.fit(x=x_train, y=y_train, epochs=30, batch_size=32)
+=======
+model.fit(x=x_train, y=y_train, epochs=50, batch_size=32)
+>>>>>>> b9c6031f13c06e5b59b96e9455572c0515622992
 
 # Saves the trained model
 model.save(filepath="Image_Classifier.h5")

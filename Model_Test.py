@@ -4,7 +4,7 @@ from keras.models import load_model
 from PIL import Image
 import numpy as np
 import matplotlib.image as im
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 labels = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
 
@@ -20,6 +20,8 @@ results = model.evaluate(x=x_test, y=y_test)
 print("Test loss:", results[0])
 print("Test accuracy:", results[1])
 
+image = x_test[107]
+
 # img = Image.open("Testimage.jpg")
 # img_array = np.asarray(img)
 # img_array = img_array.astype('float32') /255.0
@@ -29,15 +31,22 @@ print("Test accuracy:", results[1])
 # print(x_test[0])
 
 
-test_image_data = np.asarray([x_test[0]])
+test_image_data = np.asarray([image])
 
 prediction = model.predict(x=test_image_data)
 # prediction = model.predict(x=img_array)
 
 max_index = np.argmax(prediction[0])
 print(prediction)
-# print(np.argmax(prediction))
+print(np.argmax(prediction))
 print("Prediction: ", labels[max_index])
 
+<<<<<<< HEAD
 # plt.imshow(x_test[0])
 # plt.show()
+=======
+
+
+# plt.imshow(image)
+# plt.show()lbgb
+>>>>>>> b9c6031f13c06e5b59b96e9455572c0515622992
